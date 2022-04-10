@@ -27,3 +27,11 @@ class Expense(models.Model):
     
     def __str__(self):
         return self.type
+    
+class EDA(models.Model):
+    id=models.UUIDField(primary_key=True)
+    created_at=models.DateTimeField(auto_now_add=True)
+    exp_start_date=models.DateField()
+    exp_end_date=models.DateField()
+    def __str__(self):
+        return self.id
